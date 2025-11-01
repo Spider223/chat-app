@@ -10,12 +10,14 @@ export const getSocket = (): Socket => {
             throw new Error('No authentication token found. Please log in.');
         }
 
-        socket = io(import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000', {
+        socket = io('http://localhost:4000', {
             auth: {
                 token: token,
             },
             transports: ['websocket', 'polling'], // Ensure proper transport methods
         });
+
+        console.log("scokett", socket);
 
         socket.on('connect', () => {
             console.log('Connected to Socket.IO server');

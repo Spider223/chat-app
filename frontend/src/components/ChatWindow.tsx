@@ -3,7 +3,7 @@ import { type Message } from '../types';
 
 interface ChatWindowProps {
     messages: Message[];
-    chatWindowRef: React.RefObject<HTMLDivElement>;
+    chatWindowRef: React.RefObject<HTMLDivElement | null>;
     currentUserId?: string; // To differentiate user's own messages
 }
 

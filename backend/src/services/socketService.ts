@@ -16,7 +16,7 @@ const connectedUsernames = new Set<string>(); // Store usernames of connected us
 export const initSocket = (httpServer: any) => {
     io = new SocketIOServer(httpServer, {
         cors: {
-            origin: process.env.FRONTEND_URL,
+            origin: "*",
             methods: ['GET', 'POST'],
         },
     });

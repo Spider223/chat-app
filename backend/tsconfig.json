@@ -21,7 +21,7 @@
   },
   "include": [
     "src"
-  ],
+, "../frontend/src/test"  ],
   "exclude": [
     "node_modules"
   ]
